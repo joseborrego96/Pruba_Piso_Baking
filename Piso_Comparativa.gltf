@@ -4,6 +4,9 @@
         "version" : "2.0"
     },
     "extensionsUsed" : [
+        "KHR_materials_clearcoat",
+        "KHR_materials_transmission",
+        "KHR_materials_specular",
         "KHR_lights_punctual"
     ],
     "extensionsRequired" : [
@@ -30,7 +33,7 @@
         {
             "extras" : {
                 "sun_pos_properties" : {
-                    "day_of_year" : 67,
+                    "day_of_year" : 68,
                     "sun_object" : {},
                     "object_collection" : {}
                 }
@@ -846,7 +849,7 @@
                 0.5008605718612671
             ],
             "translation" : [
-                -3.0999999046325684,
+                -3.204416513442993,
                 2.4000000953674316,
                 6.5
             ]
@@ -963,16 +966,51 @@
         },
         {
             "doubleSided" : true,
+            "emissiveFactor" : [
+                1,
+                1,
+                1
+            ],
+            "emissiveTexture" : {
+                "index" : 0
+            },
+            "extensions" : {
+                "KHR_materials_clearcoat" : {
+                    "clearcoatFactor" : 1,
+                    "clearcoatRoughnessFactor" : 1,
+                    "clearcoatTexture" : {
+                        "index" : 1
+                    },
+                    "clearcoatRoughnessTexture" : {
+                        "index" : 1
+                    },
+                    "clearcoatNormalTexture" : {
+                        "index" : 2
+                    }
+                },
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 1,
+                    "transmissionTexture" : {
+                        "index" : 3
+                    }
+                },
+                "KHR_materials_specular" : {
+                    "specularColorTexture" : {
+                        "index" : 4
+                    }
+                }
+            },
             "name" : "Suelos",
+            "normalTexture" : {
+                "index" : 5
+            },
             "pbrMetallicRoughness" : {
-                "baseColorFactor" : [
-                    0.699999988079071,
-                    0.699999988079071,
-                    0.699999988079071,
-                    1
-                ],
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
+                "baseColorTexture" : {
+                    "index" : 6
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 7
+                }
             }
         },
         {
@@ -1381,6 +1419,67 @@
                     "material" : 3
                 }
             ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        },
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 3
+        },
+        {
+            "sampler" : 0,
+            "source" : 4
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Walnut Saleve",
+            "uri" : "Walnut%20Saleve.jpg"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Walnut Saleve",
+            "uri" : "Walnut%20Saleve-1.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Image",
+            "uri" : "Image.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Walnut Saleve",
+            "uri" : "Walnut%20Saleve-2.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Walnut Saleve",
+            "uri" : "Walnut%20Saleve-3.png"
         }
     ],
     "accessors" : [
@@ -3037,6 +3136,12 @@
             "byteLength" : 2928,
             "byteOffset" : 691108,
             "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
         }
     ],
     "buffers" : [
